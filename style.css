@@ -13,7 +13,7 @@
   /*=====Typography======*/
 
   --fs-1: 40px;
-  --fs-2: 19px;
+  --fs-2: 18px;
   --fs-3: 18px;
 
   --font-family-Barlow: "Barlow", sans-serif;
@@ -332,6 +332,7 @@ body {
 /*====Responsive for devices more than 992px=======*/
 
 @media (min-width: 992px) {
+
   .container {
     max-width: 1140px;
   }
@@ -365,13 +366,18 @@ body {
   .navbar-list {
     gap: 20px;
   }
+
+  .nav-link ,
+  .navbar .container  .login-btn{
+    font-size: 18px;
+  }
 }
 
 /*====Responsive for devices more than 1200px=======*/
 
 @media (min-width: 1200px) {
   :root {
-    --fs-1: 60px;
+    --fs-1: 55px;
   }
 
   .container {
@@ -379,8 +385,8 @@ body {
   }
 
   .illustration {
-    width: 150%;
-    margin-inline-start: 65px;
+    width: 130%;
+    margin-inline-start: 80px;
   }
 
   .bg-pattern {
