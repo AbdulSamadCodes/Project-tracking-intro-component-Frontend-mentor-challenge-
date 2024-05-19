@@ -1,0 +1,389 @@
+/*=========================Custom Properties========================*/
+
+:root {
+  /*=======Colors========*/
+
+  --red: hsl(0, 100%, 68%);
+  --very-dark-blue: hsl(230, 29%, 20%);
+  --dark-grayish-blue: hsl(230, 11%, 40%);
+  --grayish-blue: hsl(231, 7%, 65%);
+  --light-grayish-blue: hsl(207, 33%, 95%);
+  --white: hsl(0, 0%, 100%);
+
+  /*=====Typography======*/
+
+  --fs-1: 40px;
+  --fs-2: 19px;
+  --fs-3: 18px;
+
+  --font-family-Barlow: "Barlow", sans-serif;
+  --font-family-Barlow-condensed: "Barlow Condensed", sans-serif;
+}
+
+/*=========================Reset===========================*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+a,
+span,
+input {
+  display: block;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+  scrollbar-width: thin;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family-Barlow);
+  font-size: 14px;
+}
+
+/*=========================Reused styles===========================*/
+
+.container {
+  --spacing-inline: 25px;
+
+  padding-inline: var(--spacing-inline);
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-items-center {
+  align-items: center;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.text-align {
+  --position: center;
+
+  text-align: var(--position);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.nav-link,
+.navbar .container > .login-btn {
+  font-family: var(--font-family-Barlow-condensed);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.new,
+.hero-subtitle,
+.hero-title {
+  font-family: var(--font-family-Barlow-condensed);
+}
+
+.img-cover {
+  width: 100%;
+}
+
+/*=========================Main styles===========================*/
+
+.header:has(.navbar.active) .nav-close-btn,
+.header:has(.navbar) .nav-open-btn {
+  display: block;
+}
+
+.header:has(.navbar) .nav-close-btn,
+.header:has(.navbar.active) .nav-open-btn {
+  display: none;
+}
+
+.header {
+  width: 100vw;
+  padding-block: 25px;
+  z-index: 5;
+}
+
+.navbar {
+  top: 100px;
+  right: var(--spacing-inline);
+  left: var(--spacing-inline);
+  max-width: 280px;
+  margin-inline: auto;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px 1px hsla(230, 11%, 40%, 0.3),
+    -2px -2px 2px 1px hsl(230, 11%, 40%, 0.3);
+  padding-block: 20px;
+  background-color: var(--white);
+  display: none;
+}
+
+.navbar.active {
+  display: block;
+}
+
+.navbar-list {
+  padding-block-end: 15px;
+  border-block-end: 1px solid hsla(230, 11%, 40%, 0.4);
+}
+
+.nav-link {
+  padding-block: 10px;
+  color: var(--very-dark-blue);
+}
+
+.navbar .login-btn {
+  padding-block-start: 15px;
+  margin-inline: auto;
+  color: var(--grayish-blue);
+}
+
+/*=========Background pattern==========*/
+
+.bg-pattern {
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: calc(60vh - 10px);
+  border-end-start-radius: 60px;
+  background-color: var(--light-grayish-blue);
+  z-index: -1;
+}
+
+/*=======Hero section=========*/
+
+.hero {
+  padding-block: 100px;
+  z-index: 4;
+}
+
+.hero-content {
+  margin-block-start: 80px;
+}
+
+.hero-content .wrapper,
+.btn-wrapper {
+  gap: 10px;
+}
+
+.new {
+  color: var(--light-grayish-blue);
+  padding: 2px 8px;
+  background-color: var(--very-dark-blue);
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--grayish-blue);
+}
+
+.hero-title {
+  margin-block-start: 10px;
+  font-size: var(--fs-1);
+  color: var(--very-dark-blue);
+  line-height: 1.2;
+}
+
+.hero-text {
+  margin-block: 25px;
+  font-size: var(--fs-2);
+  max-width: 28ch;
+  font-weight: 500;
+  color: var(--dark-grayish-blue);
+  line-height: 1.4;
+}
+
+.btn-primary {
+  background-color: var(--red);
+  padding: 10px 15px;
+  color: var(--light-grayish-blue);
+  font-family: var(--font-family-Barlow-condensed);
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  font-size: var(--fs-3);
+}
+
+.btn-secondary {
+  letter-spacing: 0.3px;
+  font-weight: 500;
+  color: var(--grayish-blue);
+}
+
+.btn-wrapper {
+  flex-wrap: wrap;
+}
+
+.illustration {
+  width: calc(125vw - 10px);
+}
+
+/*===========Media queries==========*/
+
+/*======Resposnive for devies more than 575px=======*/
+
+@media (min-width: 575px) {
+  :root {
+    --fs-1: 45px;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+}
+
+/*====Responsive for devices more than 768px=======*/
+
+@media (min-width: 768px) {
+  :root {
+    --fs-1: 50px;
+  }
+
+  .container {
+    max-width: 950px;
+  }
+
+  .hero {
+    margin-block-start: 60px;
+  }
+
+  .hero .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .illustration-wrapper {
+    order: 2;
+  }
+
+  .illustration {
+    width: 130%;
+  }
+
+  .hero-content {
+    margin-block-start: 0;
+  }
+}
+
+/*====Responsive for devices more than 992px=======*/
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  /*======Desktop navbar======*/
+
+  .nav-toggle-btn {
+    display: none;
+  }
+
+  .navbar,
+  .navbar-list {
+    all: unset;
+  }
+
+  .navbar .container,
+  .navbar-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .login-btn {
+    margin-block-start: 0;
+    padding-block-start: 0;
+  }
+
+  .navbar .container {
+    gap: 80px;
+  }
+
+  .navbar-list {
+    gap: 20px;
+  }
+}
+
+/*====Responsive for devices more than 1200px=======*/
+
+@media (min-width: 1200px) {
+  :root {
+    --fs-1: 60px;
+  }
+
+  .container {
+    max-width: 1160px;
+  }
+
+  .illustration {
+    width: 150%;
+    margin-inline-start: 70px;
+  }
+
+  .bg-pattern {
+    width: calc(45vw - 10px);
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!---==========Favicon link==========-->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!---==========Fonts css  link==========-->
+
+    <link rel="stylesheet" href="Fonts/fonts.css" />
+
+    <!---==========Custom css link==========-->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Project tracking intro component</title>
+  </head>
+  <body>
+    <!--==========Header===========-->
+
+    <header class="header fixed" data-header>
+      <div class="container flex flex-space-between flex-items-center">
+        <div class="logo">
+          <a href="#">
+            <img src="/images/logo.svg" alt="" / width="30" height="30">
+          </a>
+        </div>
+
+        <nav class="navbar fixed" data-navbar>
+          <div class="container">
+            <ul class="navbar-list text-align uppercase">
+              <li class="nav-item">
+                <a href="#" class="nav-link" data-nav-link> Product </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link" data-nav-link> Features </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link" data-nav-link> Pricing </a>
+              </li>
+            </ul>
+
+            <button class="login-btn uppercase">LOGIN</button>
+          </div>
+        </nav>
+
+        <button class="nav-toggle-btn" data-nav-toggler>
+          <a href="#" class="nav-open-btn">
+            <img src="/images/icon-hamburger.svg" alt="" />
+          </a>
+
+          <a href="#" class="nav-close-btn">
+            <img src="/images/icon-close.svg" alt="" />
+          </a>
+        </button>
+      </div>
+    </header>
+
+    <!--==========Background pattern========-->
+
+    <div class="bg-pattern absolute"></div>
+
+    <!----========Hero section============-->
+
+    <section class="hero section relative">
+      <div class="container grid">
+        <div class="illustration-wrapper">
+          <figure class="illustration relative">
+            <img
+              src="/images/illustration-devices.svg"
+              alt=""
+              class="img-cover"
+            />
+          </figure>
+        </div>
+
+        <div class="hero-content">
+          <div class="wrapper flex flex-items-center">
+            <span class="new"> NEW </span>
+
+            <h3 class="hero-subtitle uppercase">Monograph Dashboard</h3>
+          </div>
+
+          <h2 class="hero-title uppercase">
+            Powerful insights<br />
+            into your team
+          </h2>
+
+          <p class="hero-text">
+            Project planning and time tracking for agile teams
+          </p>
+
+          <div class="btn-wrapper flex flex-items-center">
+            <button class="btn-primary uppercase">Schedule a demo</button>
+
+            <button class="btn-secondary uppercase">
+              to see a live preview
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========Custom script link=========-->
+
+    <script src="/script.js"></script>
+  </body>
+</html>
